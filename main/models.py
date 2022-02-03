@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MinLengthValidator
 from main.validators import only_letters_validator, file_max_size_in_mb_validator
-
+import datetime
 
 class Profile(models.Model):
     """
@@ -106,7 +106,9 @@ class Pet(models.Model):
     #  ------
 
     # Properties
-
+    @property
+    def age(self):
+        return datetime.datetime.now().year - self.date_of_birth.year
     # Methods
 
     # Dunder methods
