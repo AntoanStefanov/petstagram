@@ -1,14 +1,6 @@
 {% extends 'base.html'%} {% block page_content %}
 
-<!-- If there are NO pet photos -->
-<h1 class="text-center">No pet photos yet</h1>
-<div class="row d-flex justify-content-center align-content-center">
-  <!-- Button to Add a new Photo -->
-  <a href="#" class="btn btn-lg btn-secondary row align-self-baseline"
-    >Add Photo</a
-  >
-</div>
-
+{% if pets %}
 <!-- If there are pet photos -->
 <h1 class="text-center">All Pet Photos</h1>
 <div class="container mb-5">
@@ -54,5 +46,14 @@
     <!-- End Second Card -->
   </div>
 </div>
+{% else %}
+<h1 class="text-center">No pet photos yet</h1>
+<div class="row d-flex justify-content-center align-content-center">
+  <!-- Button to Add a new Photo -->
+  <a href="#" class="btn btn-lg btn-secondary row align-self-baseline"
+    >Add Photo</a
+  >
+</div>
+{% endif %}
 <!-- End Pet Photos -->
 {% endblock %}
