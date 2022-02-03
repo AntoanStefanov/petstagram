@@ -11,7 +11,7 @@
   </div>
   <div class="d-inline p-2 w-50">
     <!-- Info for First Pet -->
-    {% for pet in pet_photo.tagged.pets.all %}
+    {% for pet in pet_photo.tagged_pets.all %}
     <div class="d-flex justify-content-around">
       <h5><u>Type:</u> {{ pet.type }}</h5>
       <h5><u>Name:</u> {{ pet.name }}</h5>
